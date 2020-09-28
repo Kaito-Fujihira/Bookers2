@@ -1,2 +1,70 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+
+<div class="body">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-3">
+
+      <% if flash[:notice] %>
+        <div class="flash">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+
+      <h2>User info</h2>
+        <table class="table">
+          <tbody>
+            <tr>
+              <%= attachment_image_tag @user, :profile_image, :fill, 50, 50, size:'100x100', format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %>
+            </tr>
+            <tr>
+              <th>name</th>
+              <th><%= @user.name %></th>
+            </tr>
+            <tr>
+              <th>introduction</th>
+              <th><%= @user.introduction %></th>
+            </tr>
+          </tbody>
+        </table>
+          <%= link_to edit_user, class="col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
+
+      <h2>New book</h2>
+      <%= form_with model:@book, local:true do |f| %>
+      <label for="book_title">Title</label>
+      <div class="field row"><%= f.text_field :title, class:"col-xs-12 book_title" %></div>
+      <label for="book_opinion">Opinion</label>
+      <div class="field row"><%= f.text_area :opinion, class:"col-xs-12 book_body" %></div>
+      <div class="action row"><%= f.submit 'Create Book', class:"btn btn-primary col-xs-12" %></div>
+      <% end %>
+    </div>
+
+  <div class="col-xs-9">
+    <h2>Books</h2>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+          <th></th>
+          <th>Title</th>
+          <th>Opinion</th>
+          <th></th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <%= attachment_image_tag @book.user, :profile_image, :fill, 60, 60, size:'45x45', format: 'jpeg', class: "img-circle pull-left profile-thumb", fallback: "no_image.jpg" %>
+              </td>
+              <td>
+                <%= @book.title %>
+              </td>
+              <td>
+                <%= @book.opinion %>
+              </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
