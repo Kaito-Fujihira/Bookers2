@@ -1,0 +1,1324 @@
+
+Bookモデルのテスト
+  バリデーションのテスト
+    titleカラム
+[31m      空欄でないこと (FAILED - 1)[0m
+    bodyカラム
+[31m      空欄でないこと (FAILED - 2)[0m
+[31m      200文字以下であること (FAILED - 3)[0m
+  アソシエーションのテスト
+    Userモデルとの関係
+[32m      N:1となっている[0m
+
+Userモデルのテスト
+  バリデーションのテスト
+    nameカラム
+[32m      空欄でないこと[0m
+[32m      2文字以上であること[0m
+[32m      20文字以下であること[0m
+    introductionカラム
+[32m      50文字以下であること[0m
+  アソシエーションのテスト
+    Bookモデルとの関係
+[32m      1:Nとなっている[0m
+
+投稿のテスト
+  サイドバーのテスト
+    表示の確認
+[31m      New bookと表示される (FAILED - 4)[0m
+[31m      titleフォームが表示される (FAILED - 5)[0m
+[31m      opinionフォームが表示される (FAILED - 6)[0m
+[31m      Create Bookボタンが表示される (FAILED - 7)[0m
+[31m      投稿に成功する (FAILED - 8)[0m
+[31m      投稿に失敗する (FAILED - 9)[0m
+  編集のテスト
+    自分の投稿の編集画面への遷移
+[31m      遷移できる (FAILED - 10)[0m
+    他人の投稿の編集画面への遷移
+[31m      遷移できない (FAILED - 11)[0m
+    表示の確認
+[31m      Editing Bookと表示される (FAILED - 12)[0m
+[31m      title編集フォームが表示される (FAILED - 13)[0m
+[31m      opinion編集フォームが表示される (FAILED - 14)[0m
+[31m      Showリンクが表示される (FAILED - 15)[0m
+[31m      Backリンクが表示される (FAILED - 16)[0m
+    フォームの確認
+[31m      編集に成功する (FAILED - 17)[0m
+[31m      編集に失敗する (FAILED - 18)[0m
+  一覧画面のテスト
+    表示の確認
+[31m      Booksと表示される (FAILED - 19)[0m
+[31m      自分と他人の画像のリンク先が正しい (FAILED - 20)[0m
+[31m      自分と他人のタイトルのリンク先が正しい (FAILED - 21)[0m
+[31m      自分と他人のオピニオンが表示される (FAILED - 22)[0m
+  詳細画面のテスト
+    自分・他人共通の投稿詳細画面の表示を確認
+[31m      Book detailと表示される (FAILED - 23)[0m
+[31m      ユーザー画像・名前のリンク先が正しい (FAILED - 24)[0m
+[31m      投稿のtitleが表示される (FAILED - 25)[0m
+[31m      投稿のopinionが表示される (FAILED - 26)[0m
+    自分の投稿詳細画面の表示を確認
+[31m      投稿の編集リンクが表示される (FAILED - 27)[0m
+[31m      投稿の削除リンクが表示される (FAILED - 28)[0m
+    他人の投稿詳細画面の表示を確認
+[31m      投稿の編集リンクが表示されない (FAILED - 29)[0m
+[31m      投稿の削除リンクが表示されない (FAILED - 30)[0m
+
+bootstrapのテスト
+  グリッドシステムのテスト
+    ユーザー関連画面
+[31m      一覧画面 (FAILED - 31)[0m
+[31m      詳細画面 (FAILED - 32)[0m
+    投稿関連画面
+[31m      一覧画面 (FAILED - 33)[0m
+[31m      詳細画面 (FAILED - 34)[0m
+
+ヘッダーのテスト
+  ログインしていない場合
+    ヘッダーの表示を確認
+[32m      タイトルが表示される[0m
+[32m      Homeリンクが表示される[0m
+[32m      Aboutリンクが表示される[0m
+[32m      Sign upリンクが表示される[0m
+[32m      loginリンクが表示される[0m
+    ヘッダーのリンクを確認
+[32m      Home画面に遷移する[0m
+[31m      About画面に遷移する (FAILED - 35)[0m
+[32m      新規登録画面に遷移する[0m
+[32m      ログイン画面に遷移する[0m
+  ログインしている場合
+    ヘッダーの表示を確認
+[32m      タイトルが表示される[0m
+[32m      Homeリンクが表示される[0m
+[32m      Usersリンクが表示される[0m
+[32m      Booksリンクが表示される[0m
+[32m      logoutリンクが表示される[0m
+    ヘッダーのリンクを確認
+[32m      Home画面に遷移する[0m
+[32m      Users画面に遷移する[0m
+[32m      Books画面に遷移する[0m
+[31m      logoutする (FAILED - 36)[0m
+
+ユーザー権限のテスト
+  ログインしていない場合
+    投稿関連のURLにアクセス
+[31m      一覧画面に遷移できない (FAILED - 37)[0m
+[31m      編集画面に遷移できない (FAILED - 38)[0m
+[31m      詳細画面に遷移できない (FAILED - 39)[0m
+  ログインしていない場合にユーザー関連のURLにアクセス
+    ユーザー関連のURLにアクセス
+[31m      一覧画面に遷移できない (FAILED - 40)[0m
+[31m      編集画面に遷移できない (FAILED - 41)[0m
+[31m      詳細画面に遷移でない (FAILED - 42)[0m
+
+トップページのテスト
+  ボディ部分のテスト
+    表示の確認
+[32m      Log inリンクが表示される[0m
+[32m      Sign Upリンクが表示される[0m
+    ログインしている場合の挙動を確認
+[32m      Log inリンクをクリックしたらユーザー詳細画面へ遷移する[0m
+[32m      Sign Upリンクをクリックしたらユーザー詳細画面に遷移する[0m
+    ログインしていない場合の挙動を確認
+[32m      Log inリンクをクリックしたらログイン画面へ遷移する[0m
+[32m      Sign Upリンクをクリックしたら新規登録画面に遷移する[0m
+
+ユーザー認証のテスト
+  ユーザー新規登録
+    新規登録画面に遷移
+[32m      新規登録に成功する[0m
+[32m      新規登録に失敗する[0m
+  ユーザーログイン
+    ログイン画面に遷移
+[32m      ログインに成功する[0m
+[32m      ログインに失敗する[0m
+
+ユーザーのテスト
+  サイドバーのテスト
+    表示の確認
+[31m      User infoと表示される (FAILED - 43)[0m
+[31m      画像が表示される (FAILED - 44)[0m
+[31m      名前が表示される (FAILED - 45)[0m
+[31m      自己紹介が表示される (FAILED - 46)[0m
+[31m      編集リンクが表示される (FAILED - 47)[0m
+  編集のテスト
+    自分の編集画面への遷移
+[31m      遷移できる (FAILED - 48)[0m
+    他人の編集画面への遷移
+[31m      遷移できない (FAILED - 49)[0m
+    表示の確認
+[31m      User infoと表示される (FAILED - 50)[0m
+[31m      名前編集フォームに自分の名前が表示される (FAILED - 51)[0m
+[31m      画像編集フォームが表示される (FAILED - 52)[0m
+[31m      自己紹介編集フォームに自分の自己紹介が表示される (FAILED - 53)[0m
+[31m      編集に成功する (FAILED - 54)[0m
+[31m      編集に失敗する (FAILED - 55)[0m
+  一覧画面のテスト
+    表示の確認
+[31m      Usersと表示される (FAILED - 56)[0m
+[31m      自分と他の人の画像が表示される (FAILED - 57)[0m
+[31m      自分と他の人の名前が表示される (FAILED - 58)[0m
+[31m      showリンクが表示される (FAILED - 59)[0m
+  詳細画面のテスト
+    表示の確認
+[31m      Booksと表示される (FAILED - 60)[0m
+[31m      投稿一覧のユーザーの画像のリンク先が正しい (FAILED - 61)[0m
+[31m      投稿一覧のtitleのリンク先が正しい (FAILED - 62)[0m
+[31m      投稿一覧にopinionが表示される (FAILED - 63)[0m
+
+Failures:
+
+  1) Bookモデルのテスト バリデーションのテスト titleカラム 空欄でないこと
+     [31mFailure/Error: expect(book.valid?).to eq false;[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `opinion' for #<Book:0x000000000789a808>[0m
+     [36m# ./spec/models/book_spec.rb:11:in `block (4 levels) in <top (required)>'[0m
+
+  2) Bookモデルのテスト バリデーションのテスト bodyカラム 空欄でないこと
+     [31mFailure/Error: expect(book.valid?).to eq false;[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `opinion' for #<Book:0x0000000007c27138>[0m
+     [36m# ./spec/models/book_spec.rb:17:in `block (4 levels) in <top (required)>'[0m
+
+  3) Bookモデルのテスト バリデーションのテスト bodyカラム 200文字以下であること
+     [31mFailure/Error: expect(book.valid?).to eq false;[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `opinion' for #<Book:0x0000000007c57590>[0m
+     [36m# ./spec/models/book_spec.rb:21:in `block (4 levels) in <top (required)>'[0m
+
+  4) 投稿のテスト サイドバーのテスト 表示の確認 New bookと表示される
+     [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `opinion' for #<Book:0x00000000075a8d70>[0m
+     [31m[0m
+     [31m[0m
+     [31m[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+     [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  5) 投稿のテスト サイドバーのテスト 表示の確認 titleフォームが表示される
+     [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `opinion' for #<Book:0x00000000077b1108>[0m
+     [31m[0m
+     [31m[0m
+     [31m[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+     [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  6) 投稿のテスト サイドバーのテスト 表示の確認 opinionフォームが表示される
+     [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `opinion' for #<Book:0x000000000787e270>[0m
+     [31m[0m
+     [31m[0m
+     [31m[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+     [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  7) 投稿のテスト サイドバーのテスト 表示の確認 Create Bookボタンが表示される
+     [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `opinion' for #<Book:0x00000000078e5150>[0m
+     [31m[0m
+     [31m[0m
+     [31m[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+     [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  8) 投稿のテスト サイドバーのテスト 表示の確認 投稿に成功する
+     [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `opinion' for #<Book:0x00000000079d1eb0>[0m
+     [31m[0m
+     [31m[0m
+     [31m[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+     [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  9) 投稿のテスト サイドバーのテスト 表示の確認 投稿に失敗する
+     [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+     [31m[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `opinion' for #<Book:0x0000000007ad8f70>[0m
+     [31m[0m
+     [31m[0m
+     [31m[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+     [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+     [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  10) 投稿のテスト 編集のテスト 自分の投稿の編集画面への遷移 遷移できる
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007bc1798>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  11) 投稿のテスト 編集のテスト 他人の投稿の編集画面への遷移 遷移できない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007c28b00>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  12) 投稿のテスト 編集のテスト 表示の確認 Editing Bookと表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x00000000073fa3e8>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  13) 投稿のテスト 編集のテスト 表示の確認 title編集フォームが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x000000000752d148>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  14) 投稿のテスト 編集のテスト 表示の確認 opinion編集フォームが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x000000000734d558>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  15) 投稿のテスト 編集のテスト 表示の確認 Showリンクが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007254f98>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  16) 投稿のテスト 編集のテスト 表示の確認 Backリンクが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007110998>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  17) 投稿のテスト 編集のテスト フォームの確認 編集に成功する
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007c6f370>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  18) 投稿のテスト 編集のテスト フォームの確認 編集に失敗する
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007c92be0>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  19) 投稿のテスト 一覧画面のテスト 表示の確認 Booksと表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007cb4ce0>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  20) 投稿のテスト 一覧画面のテスト 表示の確認 自分と他人の画像のリンク先が正しい
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007cd80c8>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  21) 投稿のテスト 一覧画面のテスト 表示の確認 自分と他人のタイトルのリンク先が正しい
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007d03db8>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  22) 投稿のテスト 一覧画面のテスト 表示の確認 自分と他人のオピニオンが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007d27380>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  23) 投稿のテスト 詳細画面のテスト 自分・他人共通の投稿詳細画面の表示を確認 Book detailと表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007d489b8>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  24) 投稿のテスト 詳細画面のテスト 自分・他人共通の投稿詳細画面の表示を確認 ユーザー画像・名前のリンク先が正しい
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007d73dc0>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  25) 投稿のテスト 詳細画面のテスト 自分・他人共通の投稿詳細画面の表示を確認 投稿のtitleが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007d97ce8>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  26) 投稿のテスト 詳細画面のテスト 自分・他人共通の投稿詳細画面の表示を確認 投稿のopinionが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007dbb008>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  27) 投稿のテスト 詳細画面のテスト 自分の投稿詳細画面の表示を確認 投稿の編集リンクが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007dea1f0>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  28) 投稿のテスト 詳細画面のテスト 自分の投稿詳細画面の表示を確認 投稿の削除リンクが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007e218f8>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  29) 投稿のテスト 詳細画面のテスト 他人の投稿詳細画面の表示を確認 投稿の編集リンクが表示されない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007e5fd60>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  30) 投稿のテスト 詳細画面のテスト 他人の投稿詳細画面の表示を確認 投稿の削除リンクが表示されない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007e90050>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/books_spec.rb:6:in `block (2 levels) in <main>'[0m
+
+  31) bootstrapのテスト グリッドシステムのテスト ユーザー関連画面 一覧画面
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007ebf328>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/bootstrap_spec.rb:5:in `block (2 levels) in <main>'[0m
+
+  32) bootstrapのテスト グリッドシステムのテスト ユーザー関連画面 詳細画面
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007edcb08>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/bootstrap_spec.rb:5:in `block (2 levels) in <main>'[0m
+
+  33) bootstrapのテスト グリッドシステムのテスト 投稿関連画面 一覧画面
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007f09d88>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/bootstrap_spec.rb:5:in `block (2 levels) in <main>'[0m
+
+  34) bootstrapのテスト グリッドシステムのテスト 投稿関連画面 詳細画面
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000007f2f420>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/bootstrap_spec.rb:5:in `block (2 levels) in <main>'[0m
+
+  35) ヘッダーのテスト ログインしていない場合 ヘッダーのリンクを確認 About画面に遷移する
+      [31mFailure/Error: is_expected.to eq('/home/about')[0m
+      [31m[0m
+      [31m  expected: "/home/about"[0m
+      [31m       got: "/homes/about"[0m
+      [31m[0m
+      [31m  (compared using ==)[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# ./spec/system/header_spec.rb:47:in `block (4 levels) in <main>'[0m
+
+  36) ヘッダーのテスト ログインしている場合 ヘッダーのリンクを確認 logoutする
+      [31mFailure/Error: expect(page).to have_content 'Signed out successfully.'[0m
+      [31m  expected to find text "Signed out successfully." in "Bookers\nHome About sign up login\nwelcome to Bookers !!\nIn Bookers,\nyou can share and exchange your opinions , inpressions , and emotions\nabout various books!\nLog in\nSign up\nCopyRight Infratop.inc"[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# ./spec/system/header_spec.rb:119:in `block (4 levels) in <main>'[0m
+
+  37) ユーザー権限のテスト ログインしていない場合 投稿関連のURLにアクセス 一覧画面に遷移できない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x00000000083795f8>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/main_spec.rb:5:in `block (2 levels) in <main>'[0m
+
+  38) ユーザー権限のテスト ログインしていない場合 投稿関連のURLにアクセス 編集画面に遷移できない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000008839f98>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/main_spec.rb:5:in `block (2 levels) in <main>'[0m
+
+  39) ユーザー権限のテスト ログインしていない場合 投稿関連のURLにアクセス 詳細画面に遷移できない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x00000000088da678>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/main_spec.rb:5:in `block (2 levels) in <main>'[0m
+
+  40) ユーザー権限のテスト ログインしていない場合にユーザー関連のURLにアクセス ユーザー関連のURLにアクセス 一覧画面に遷移できない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x00000000089b2208>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/main_spec.rb:5:in `block (2 levels) in <main>'[0m
+
+  41) ユーザー権限のテスト ログインしていない場合にユーザー関連のURLにアクセス ユーザー関連のURLにアクセス 編集画面に遷移できない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000008abca40>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/main_spec.rb:5:in `block (2 levels) in <main>'[0m
+
+  42) ユーザー権限のテスト ログインしていない場合にユーザー関連のURLにアクセス ユーザー関連のURLにアクセス 詳細画面に遷移でない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000008b506f0>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/main_spec.rb:5:in `block (2 levels) in <main>'[0m
+
+  43) ユーザーのテスト サイドバーのテスト 表示の確認 User infoと表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x000000000817dfb0>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  44) ユーザーのテスト サイドバーのテスト 表示の確認 画像が表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x00000000082203f0>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  45) ユーザーのテスト サイドバーのテスト 表示の確認 名前が表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x00000000082ab748>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  46) ユーザーのテスト サイドバーのテスト 表示の確認 自己紹介が表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000008329dc8>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  47) ユーザーのテスト サイドバーのテスト 表示の確認 編集リンクが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x00000000083de9a8>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  48) ユーザーのテスト 編集のテスト 自分の編集画面への遷移 遷移できる
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x000000000845c308>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  49) ユーザーのテスト 編集のテスト 他人の編集画面への遷移 遷移できない
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000008508b58>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  50) ユーザーのテスト 編集のテスト 表示の確認 User infoと表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x00000000085cd228>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  51) ユーザーのテスト 編集のテスト 表示の確認 名前編集フォームに自分の名前が表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x00000000086806c0>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  52) ユーザーのテスト 編集のテスト 表示の確認 画像編集フォームが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x00000000087ac850>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  53) ユーザーのテスト 編集のテスト 表示の確認 自己紹介編集フォームに自分の自己紹介が表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000008869450>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  54) ユーザーのテスト 編集のテスト 表示の確認 編集に成功する
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x000000000891aa48>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  55) ユーザーのテスト 編集のテスト 表示の確認 編集に失敗する
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x00000000089cbed8>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  56) ユーザーのテスト 一覧画面のテスト 表示の確認 Usersと表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000008a892a8>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  57) ユーザーのテスト 一覧画面のテスト 表示の確認 自分と他の人の画像が表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000008b394f0>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  58) ユーザーのテスト 一覧画面のテスト 表示の確認 自分と他の人の名前が表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000008bfe458>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  59) ユーザーのテスト 一覧画面のテスト 表示の確認 showリンクが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x0000000008ca7148>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  60) ユーザーのテスト 詳細画面のテスト 表示の確認 Booksと表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x00000000086e9a30>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  61) ユーザーのテスト 詳細画面のテスト 表示の確認 投稿一覧のユーザーの画像のリンク先が正しい
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x000000000a20f850>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  62) ユーザーのテスト 詳細画面のテスト 表示の確認 投稿一覧のtitleのリンク先が正しい
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x000000000a26c118>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+  63) ユーザーのテスト 詳細画面のテスト 表示の確認 投稿一覧にopinionが表示される
+      [31mFailure/Error: let!(:book) { create(:book, user: user) }[0m
+      [31m[0m
+      [31mNoMethodError:[0m
+      [31m  undefined method `opinion' for #<Book:0x000000000a2aa4b8>[0m
+      [31m[0m
+      [31m[0m
+      [31m[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/evaluation.rb:18:in `create'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:12:in `block in result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `tap'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy/create.rb:9:in `result'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory.rb:43:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:29:in `block in run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/factory_runner.rb:28:in `run'[0m
+      [36m# /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/factory_bot-6.1.0/lib/factory_bot/strategy_syntax_method_registrar.rb:28:in `block in define_singular_strategy_method'[0m
+      [36m# ./spec/system/users_spec.rb:58:in `block (2 levels) in <main>'[0m
+
+Finished in 1.76 seconds (files took 1.27 seconds to load)
+[31m95 examples, 63 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/models/book_spec.rb:9[0m [36m# Bookモデルのテスト バリデーションのテスト titleカラム 空欄でないこと[0m
+[31mrspec ./spec/models/book_spec.rb:15[0m [36m# Bookモデルのテスト バリデーションのテスト bodyカラム 空欄でないこと[0m
+[31mrspec ./spec/models/book_spec.rb:19[0m [36m# Bookモデルのテスト バリデーションのテスト bodyカラム 200文字以下であること[0m
+[31mrspec ./spec/system/books_spec.rb:16[0m [36m# 投稿のテスト サイドバーのテスト 表示の確認 New bookと表示される[0m
+[31mrspec ./spec/system/books_spec.rb:19[0m [36m# 投稿のテスト サイドバーのテスト 表示の確認 titleフォームが表示される[0m
+[31mrspec ./spec/system/books_spec.rb:22[0m [36m# 投稿のテスト サイドバーのテスト 表示の確認 opinionフォームが表示される[0m
+[31mrspec ./spec/system/books_spec.rb:25[0m [36m# 投稿のテスト サイドバーのテスト 表示の確認 Create Bookボタンが表示される[0m
+[31mrspec ./spec/system/books_spec.rb:28[0m [36m# 投稿のテスト サイドバーのテスト 表示の確認 投稿に成功する[0m
+[31mrspec ./spec/system/books_spec.rb:34[0m [36m# 投稿のテスト サイドバーのテスト 表示の確認 投稿に失敗する[0m
+[31mrspec ./spec/system/books_spec.rb:44[0m [36m# 投稿のテスト 編集のテスト 自分の投稿の編集画面への遷移 遷移できる[0m
+[31mrspec ./spec/system/books_spec.rb:50[0m [36m# 投稿のテスト 編集のテスト 他人の投稿の編集画面への遷移 遷移できない[0m
+[31mrspec ./spec/system/books_spec.rb:59[0m [36m# 投稿のテスト 編集のテスト 表示の確認 Editing Bookと表示される[0m
+[31mrspec ./spec/system/books_spec.rb:62[0m [36m# 投稿のテスト 編集のテスト 表示の確認 title編集フォームが表示される[0m
+[31mrspec ./spec/system/books_spec.rb:65[0m [36m# 投稿のテスト 編集のテスト 表示の確認 opinion編集フォームが表示される[0m
+[31mrspec ./spec/system/books_spec.rb:68[0m [36m# 投稿のテスト 編集のテスト 表示の確認 Showリンクが表示される[0m
+[31mrspec ./spec/system/books_spec.rb:71[0m [36m# 投稿のテスト 編集のテスト 表示の確認 Backリンクが表示される[0m
+[31mrspec ./spec/system/books_spec.rb:76[0m [36m# 投稿のテスト 編集のテスト フォームの確認 編集に成功する[0m
+[31mrspec ./spec/system/books_spec.rb:82[0m [36m# 投稿のテスト 編集のテスト フォームの確認 編集に失敗する[0m
+[31mrspec ./spec/system/books_spec.rb:97[0m [36m# 投稿のテスト 一覧画面のテスト 表示の確認 Booksと表示される[0m
+[31mrspec ./spec/system/books_spec.rb:100[0m [36m# 投稿のテスト 一覧画面のテスト 表示の確認 自分と他人の画像のリンク先が正しい[0m
+[31mrspec ./spec/system/books_spec.rb:104[0m [36m# 投稿のテスト 一覧画面のテスト 表示の確認 自分と他人のタイトルのリンク先が正しい[0m
+[31mrspec ./spec/system/books_spec.rb:108[0m [36m# 投稿のテスト 一覧画面のテスト 表示の確認 自分と他人のオピニオンが表示される[0m
+[31mrspec ./spec/system/books_spec.rb:117[0m [36m# 投稿のテスト 詳細画面のテスト 自分・他人共通の投稿詳細画面の表示を確認 Book detailと表示される[0m
+[31mrspec ./spec/system/books_spec.rb:121[0m [36m# 投稿のテスト 詳細画面のテスト 自分・他人共通の投稿詳細画面の表示を確認 ユーザー画像・名前のリンク先が正しい[0m
+[31mrspec ./spec/system/books_spec.rb:125[0m [36m# 投稿のテスト 詳細画面のテスト 自分・他人共通の投稿詳細画面の表示を確認 投稿のtitleが表示される[0m
+[31mrspec ./spec/system/books_spec.rb:129[0m [36m# 投稿のテスト 詳細画面のテスト 自分・他人共通の投稿詳細画面の表示を確認 投稿のopinionが表示される[0m
+[31mrspec ./spec/system/books_spec.rb:135[0m [36m# 投稿のテスト 詳細画面のテスト 自分の投稿詳細画面の表示を確認 投稿の編集リンクが表示される[0m
+[31mrspec ./spec/system/books_spec.rb:139[0m [36m# 投稿のテスト 詳細画面のテスト 自分の投稿詳細画面の表示を確認 投稿の削除リンクが表示される[0m
+[31mrspec ./spec/system/books_spec.rb:145[0m [36m# 投稿のテスト 詳細画面のテスト 他人の投稿詳細画面の表示を確認 投稿の編集リンクが表示されない[0m
+[31mrspec ./spec/system/books_spec.rb:149[0m [36m# 投稿のテスト 詳細画面のテスト 他人の投稿詳細画面の表示を確認 投稿の削除リンクが表示されない[0m
+[31mrspec ./spec/system/bootstrap_spec.rb:14[0m [36m# bootstrapのテスト グリッドシステムのテスト ユーザー関連画面 一覧画面[0m
+[31mrspec ./spec/system/bootstrap_spec.rb:19[0m [36m# bootstrapのテスト グリッドシステムのテスト ユーザー関連画面 詳細画面[0m
+[31mrspec ./spec/system/bootstrap_spec.rb:26[0m [36m# bootstrapのテスト グリッドシステムのテスト 投稿関連画面 一覧画面[0m
+[31mrspec ./spec/system/bootstrap_spec.rb:31[0m [36m# bootstrapのテスト グリッドシステムのテスト 投稿関連画面 詳細画面[0m
+[31mrspec ./spec/system/header_spec.rb:43[0m [36m# ヘッダーのテスト ログインしていない場合 ヘッダーのリンクを確認 About画面に遷移する[0m
+[31mrspec ./spec/system/header_spec.rb:115[0m [36m# ヘッダーのテスト ログインしている場合 ヘッダーのリンクを確認 logoutする[0m
+[31mrspec ./spec/system/main_spec.rb:8[0m [36m# ユーザー権限のテスト ログインしていない場合 投稿関連のURLにアクセス 一覧画面に遷移できない[0m
+[31mrspec ./spec/system/main_spec.rb:12[0m [36m# ユーザー権限のテスト ログインしていない場合 投稿関連のURLにアクセス 編集画面に遷移できない[0m
+[31mrspec ./spec/system/main_spec.rb:16[0m [36m# ユーザー権限のテスト ログインしていない場合 投稿関連のURLにアクセス 詳細画面に遷移できない[0m
+[31mrspec ./spec/system/main_spec.rb:24[0m [36m# ユーザー権限のテスト ログインしていない場合にユーザー関連のURLにアクセス ユーザー関連のURLにアクセス 一覧画面に遷移できない[0m
+[31mrspec ./spec/system/main_spec.rb:28[0m [36m# ユーザー権限のテスト ログインしていない場合にユーザー関連のURLにアクセス ユーザー関連のURLにアクセス 編集画面に遷移できない[0m
+[31mrspec ./spec/system/main_spec.rb:32[0m [36m# ユーザー権限のテスト ログインしていない場合にユーザー関連のURLにアクセス ユーザー関連のURLにアクセス 詳細画面に遷移でない[0m
+[31mrspec ./spec/system/users_spec.rb:67[0m [36m# ユーザーのテスト サイドバーのテスト 表示の確認 User infoと表示される[0m
+[31mrspec ./spec/system/users_spec.rb:70[0m [36m# ユーザーのテスト サイドバーのテスト 表示の確認 画像が表示される[0m
+[31mrspec ./spec/system/users_spec.rb:73[0m [36m# ユーザーのテスト サイドバーのテスト 表示の確認 名前が表示される[0m
+[31mrspec ./spec/system/users_spec.rb:76[0m [36m# ユーザーのテスト サイドバーのテスト 表示の確認 自己紹介が表示される[0m
+[31mrspec ./spec/system/users_spec.rb:79[0m [36m# ユーザーのテスト サイドバーのテスト 表示の確認 編集リンクが表示される[0m
+[31mrspec ./spec/system/users_spec.rb:88[0m [36m# ユーザーのテスト 編集のテスト 自分の編集画面への遷移 遷移できる[0m
+[31mrspec ./spec/system/users_spec.rb:94[0m [36m# ユーザーのテスト 編集のテスト 他人の編集画面への遷移 遷移できない[0m
+[31mrspec ./spec/system/users_spec.rb:104[0m [36m# ユーザーのテスト 編集のテスト 表示の確認 User infoと表示される[0m
+[31mrspec ./spec/system/users_spec.rb:107[0m [36m# ユーザーのテスト 編集のテスト 表示の確認 名前編集フォームに自分の名前が表示される[0m
+[31mrspec ./spec/system/users_spec.rb:110[0m [36m# ユーザーのテスト 編集のテスト 表示の確認 画像編集フォームが表示される[0m
+[31mrspec ./spec/system/users_spec.rb:113[0m [36m# ユーザーのテスト 編集のテスト 表示の確認 自己紹介編集フォームに自分の自己紹介が表示される[0m
+[31mrspec ./spec/system/users_spec.rb:116[0m [36m# ユーザーのテスト 編集のテスト 表示の確認 編集に成功する[0m
+[31mrspec ./spec/system/users_spec.rb:121[0m [36m# ユーザーのテスト 編集のテスト 表示の確認 編集に失敗する[0m
+[31mrspec ./spec/system/users_spec.rb:136[0m [36m# ユーザーのテスト 一覧画面のテスト 表示の確認 Usersと表示される[0m
+[31mrspec ./spec/system/users_spec.rb:139[0m [36m# ユーザーのテスト 一覧画面のテスト 表示の確認 自分と他の人の画像が表示される[0m
+[31mrspec ./spec/system/users_spec.rb:142[0m [36m# ユーザーのテスト 一覧画面のテスト 表示の確認 自分と他の人の名前が表示される[0m
+[31mrspec ./spec/system/users_spec.rb:146[0m [36m# ユーザーのテスト 一覧画面のテスト 表示の確認 showリンクが表示される[0m
+[31mrspec ./spec/system/users_spec.rb:157[0m [36m# ユーザーのテスト 詳細画面のテスト 表示の確認 Booksと表示される[0m
+[31mrspec ./spec/system/users_spec.rb:160[0m [36m# ユーザーのテスト 詳細画面のテスト 表示の確認 投稿一覧のユーザーの画像のリンク先が正しい[0m
+[31mrspec ./spec/system/users_spec.rb:163[0m [36m# ユーザーのテスト 詳細画面のテスト 表示の確認 投稿一覧のtitleのリンク先が正しい[0m
+[31mrspec ./spec/system/users_spec.rb:166[0m [36m# ユーザーのテスト 詳細画面のテスト 表示の確認 投稿一覧にopinionが表示される[0m
+

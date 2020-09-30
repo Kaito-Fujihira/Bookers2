@@ -1,6 +1,6 @@
 <div class="body">
   <div class="container">
-    
+
      <% if @user.errors.any? %>
         <div class="alert-warning">
         <h2><%= pluralize(@user.errors.count, "error") %> prohibited this obj from being saved:</h2>
@@ -11,7 +11,7 @@
         </ul>
         </div>
       <% end %>
-      
+
     <h2>User info</h2>
     <%= form_with model:@user, local:true do |f|%>
     <div class="field">
