@@ -3,21 +3,21 @@
 <div class="container">
 
   <% if flash[:notice] %>
-        <div class="flash">
-          <%= flash[:notice] %>
-        </div>
-      <% end %>
+    <div class="flash">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
 
-      <% if @book.errors.any? %>
-        <div class="alert-warning">
-        <h2><%= pluralize(@book.errors.count, "error") %> prohibited this obj from being saved:</h2>
+  <% if @book.errors.any? %>
+    <div class="alert-warning">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this obj from being saved:</h2>
         <ul>
           <% @book.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+            <li><%= message %></li>
           <% end %>
         </ul>
-        </div>
-      <% end %>
+    </div>
+  <% end %>
 
   <div class="row">
     <div class="col-xs-3">
@@ -38,9 +38,7 @@
           </tbody>
         </table>
           <div class="row">
-          <% if @user.id == current_user.id %>
-          <%= link_to "", edit_user_path(@user), class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_id" %>
-          <% end %>
+          <%= link_to "", edit_user_path(current_user.id), class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_id" %>
           </div>
 
       <h2>New book</h2>
@@ -48,7 +46,7 @@
       <label for="book_title">Title</label>
       <div class="field row"><%= f.text_field :title, class: "col-xs-12 book_title" %></div>
       <label for="book_opinion">Opinion</label>
-      <div class="field row"><%= f.text_area :bo, class: "col-xs-12 book_body" %></div>
+      <div class="field row"><%= f.text_area :body, class: "col-xs-12 book_body" %></div>
       <div class="action row"><%= f.submit 'Create Book', class: "btn btn-primary col-xs-12" %></div>
       <% end %>
     </div>
