@@ -1,55 +1,5 @@
 
-<div class="body">
-<div class="container">
-
-  <% if flash[:notice] %>
-    <div class="flash">
-      <%= flash[:notice] %>
-    </div>
-  <% end %>
-
-  <% if @book.errors.any? %>
-    <div class="alert-warning">
-      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this obj from being saved:</h2>
-        <ul>
-          <% @book.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
-    </div>
-  <% end %>
-
-  <div class="row">
-    <div class="col-xs-3">
-      <h2>User info</h2>
-        <table class="table">
-          <tbody>
-            <tr>
-              <%= attachment_image_tag @user, :profile_image, size:'90x90', format: 'jpeg', class: "attachment user profile_image fallback", fallback: "no_image.jpg" %>
-            </tr>
-            <tr>
-              <th>name</th>
-              <th><%= @user.name %></th>
-            </tr>
-            <tr>
-              <th>introduction</th>
-              <th><%= @user.introduction %></th>
-            </tr>
-          </tbody>
-        </table>
-          <div class="row">
-          <%= link_to "", edit_user_path(current_user.id), class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_id" %>
-          </div>
-
-      <h2>New book</h2>
-      <%= form_with model: @book, local: true do |f| %>
-      <label for="book_title">Title</label>
-      <div class="field row"><%= f.text_field :title, class: "col-xs-12 book_title" %></div>
-      <label for="book_opinion">Opinion</label>
-      <div class="field row"><%= f.text_area :body, class: "col-xs-12 book_body" %></div>
-      <div class="action row"><%= f.submit 'Create Book', class: "btn btn-primary col-xs-12" %></div>
-      <% end %>
-    </div>
+<%= render "layouts/list", user: @user, book: @book %>
 
   <div class="col-xs-9">
     <h2>Books</h2>
