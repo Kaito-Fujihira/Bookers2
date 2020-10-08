@@ -16,3 +16,23 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require_tree .
+$(document).ready(function(){
+  $(".jquery").on("click",function(){
+    $(this).css("color","red")
+  });
+});
+
+$(document).ready(function () {
+  $("#theTarget").skippr({
+    transition : 'fade',
+    speed : 3000,
+    easing : 'easeOutQuart',
+    navType : 'block',
+    childrenElementType : 'div',
+    arrows : false,
+    autoPlay : true,
+    autoPlayDuration : 4500,
+    keyboardOnAlways : false,
+    hidePrevious : false
+  });
+});
