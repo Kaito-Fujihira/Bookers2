@@ -1,5 +1,4 @@
 class NotificationMailer < ApplicationMailer
-  default from: "k.f.alamoana@gmail.com"
 
   def complete_mail(user)
     @user = user
