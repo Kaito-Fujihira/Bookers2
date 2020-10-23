@@ -27,6 +27,16 @@ class UsersController < ApplicationController
   end
   end
 
+  def create
+     @user = User.new(user_params)
+    if @user.save
+      NotificationMailer.complete_mail(@user).deliver_now
+      redirect_to @user
+    else
+      render 'new'
+    end
+  end
+
   private
   def user_params
   params.require(:user).permit(:name, :introduction, :profile_image)
