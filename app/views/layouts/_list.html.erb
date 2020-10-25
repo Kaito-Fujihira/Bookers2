@@ -42,13 +42,13 @@
 
           <% if user.id == current_user.id %>
               <% if isRoom == true %>
-                <%= link_to "チャットを始める!!", room_path(roomId), method: :get, class: "restart-chat-button" %>
+                <%= link_to "チャットを始める!!", room_path(roomId), method: :get, class: "start-chat-btn" %>
               <% else %>
                 <%= form_with model: room, method: :post, local: true do |f| %>
                   <%= fields_for entry do |e| %>
                     <%= e.hidden_field :user_id, value: user.id %>
                   <% end %>
-                  <%= f.submit "チャットを始める", class: "start-chat-button" %>
+                  <%= f.submit "チャットを始める", class: "start-chat-btn" %>
                 <% end %>
               <% end %>
             <% end %>

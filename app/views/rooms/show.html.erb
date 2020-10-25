@@ -1,5 +1,9 @@
+<% @entries.each do |e| %>
+  <h2><%= e.user.name%> さんとのチャット</h2>
+<% end %>
+<br>
 
-<% if @messages.present? %>
+<% unless @messages.present? %>
   <% @messages.each do |m| %>
     <strong><%= m.content %></strong>
     <small>by <strong><a href="/users/<%= m.user_id %>"><%= m.user.email %>さん</a></strong></small>
@@ -10,9 +14,9 @@
   <h3 class="text-center">メッセージはまだありません</h3>
 <% end %>
 
-<%= form_with model: @message, local: true do |f| %>
-  <%= f.text_field :content, :placeholder => "メッセージを入力して下さい" , :size => 70 %>
-  <%= f.hidden_field :room_id, :value => @room.id %>
+<%= form_with model:@message, local: true do |f| %>
+  <%= f.text_field :content, :size => 30 %>
+  <%= f.hidden_field :room_id, value: @room.id %>
   <br>
   <%= f.submit "投稿する" %>
 <% end %>

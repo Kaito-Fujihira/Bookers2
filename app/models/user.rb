@@ -7,6 +7,7 @@ class User < ApplicationRecord
   # チャット
   has_many :messages, dependent: :destroy
   has_many :entries, dependent: :destroy
+  has_many :rooms, through: :entries #+
 
   validates:name, {presence: true, length: {maximum: 20}}
   validates:name, length: {minimum: 2}
