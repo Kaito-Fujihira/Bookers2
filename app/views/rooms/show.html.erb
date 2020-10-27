@@ -3,6 +3,8 @@
 <% end %>
 <br>
 
+<h1 id="room" data-room="<%= @room.id %>" data-user="<%= current_user.id %>"><%= @user.name %> さんとのチャット</h1>
+
 <% unless @messages.present? %>
   <% @messages.each do |m| %>
     <strong><%= m.content %></strong>
