@@ -15,19 +15,19 @@ class UsersController < ApplicationController
     unless @user.id == current_user.id
       @currentUserEntry.each do |cu|
         @userEntry.each do |u|
-          if cu.room_id == u.room_id
+          if cu.room_id == u.room_id then
             @isRoom = true
             @roomId = cu.room_id
           end
         end
       end
-      unless @isRoom
+      if @isRoom
+      else
         @room = Room.new
         @entry = Entry.new
       end
     end
   end
-
 
   def edit
     @user = User.find(current_user.id)

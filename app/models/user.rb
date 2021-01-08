@@ -7,11 +7,10 @@ class User < ApplicationRecord
   # チャット
   has_many :messages, dependent: :destroy
   has_many :entries, dependent: :destroy
-  has_many :rooms, through: :entries #+
+  has_many :books, dependent: :destroy
+  attachment :profile_image
 
   validates:name, {presence: true, length: {maximum: 20}}
   validates:name, length: {minimum: 2}
   validates:introduction, length: {maximum: 50}
-  has_many :books, dependent: :destroy
-  attachment :profile_image
 end

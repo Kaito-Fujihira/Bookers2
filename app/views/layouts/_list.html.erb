@@ -40,11 +40,11 @@
           <%= link_to "", edit_user_path(current_user.id), class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_id" %>
           </div>
 
-          <% if user.id == current_user.id %>
+          <% unless user.id == current_user.id %>
               <% if isRoom == true %>
                 <%= link_to "チャットを始める!!", room_path(roomId), method: :get, class: "start-chat-btn" %>
               <% else %>
-                <%= form_with model: room, method: :post, local: true do |f| %>
+                <%= form_with model: room, local: true do |f| %>
                   <%= fields_for entry do |e| %>
                     <%= e.hidden_field :user_id, value: user.id %>
                   <% end %>

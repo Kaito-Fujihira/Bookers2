@@ -1,14 +1,13 @@
 <% @entries.each do |e| %>
-  <h2><%= e.user.name%> さんとのチャット</h2>
+  <h2><%= e.user.name %> さんとのチャット</h2>
 <% end %>
 <br>
 
-<h1 id="room" data-room="<%= @room.id %>" data-user="<%= current_user.id %>"><%= @user.name %> さんとのチャット</h1>
 
-<% unless @messages.present? %>
+<% if @messages.present? %>
   <% @messages.each do |m| %>
     <strong><%= m.content %></strong>
-    <small>by <strong><a href="/users/<%= m.user_id %>"><%= m.user.email %>さん</a></strong></small>
+    <small>by <strong><a href="/users/<%= m.user_id %>"><%= m.user.name %>さん</a></strong></small>
     <!--%= link_to "%= m.user.name %>さん", user_path(user) %>-->
     <hr>
   <% end %>
